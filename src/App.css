@@ -1,0 +1,155 @@
+/* Full-screen background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1e1f2f;
+  font-family: 'Segoe UI', sans-serif;
+}
+h1{
+  text-align: center;
+  color: #4FC3F7; 
+}
+
+/* Main container */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.heading {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.input-container input {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+  outline: none;
+}
+
+.input-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
+}
+
+/* Todo container */
+.scroll-list-container {
+  position: relative;
+  width: 90%;      /* changed from 100% to 80% */
+  max-width: 800px; /* optional: keeps max size */
+  margin: auto;     /* centers horizontally */
+  height: 95vh;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 300px; /* Set height to allow vertical centering */
+  position: relative;
+}
+
+.no-task-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-task {
+  color: #aaa;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.item-text {
+  font-size: 1.4rem;
+  /* Or try: */
+  /* color: #4CAF50;  Green */
+  color: #FFD700;  
+  /* color: #00BCD4;  Cyan */
+  /* color: #E91E63;  Pink */
+  text-align: center;
+}
+
+/* Todo item */
+.item {
+  width: 100%;
+  background-color: #2e3047;
+  color: #e0e0e8;
+  padding: 12px 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures full width spacing */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  gap: 12px; /* Adds space between elements */
+}
+
+.item:hover {
+  background-color: #3a3c59;
+}
+
+.item input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 20px; /* Optional extra spacing */
+}
+
+.item p {
+  flex-grow: 1;       /* Take up remaining space */
+  margin: 0;
+  font-size: 17px;
+  text-align: left;
+  user-select: none;
+  line-height: 1.4;
+}
+
+.deletebtn {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.deletebtn:hover {
+  background-color: #c0392b;
+}
